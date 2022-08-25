@@ -1,0 +1,21 @@
+5. 
+// - that indicates that anything to the right is a comment
+<< - that's the output operator
+C++ - the programming language written by Bjarne Stroustrup, often called C with classes
+comment - a human readable note that's disregarded from the program at compile time
+compiler - a program which turns your source code into machine readable code
+compile-time error - an error that was detected when you attempted to compile your program
+cout - the function that outputs characters to the console
+executable - a program that has been compiled and can be run on a computer
+function - a list of instructions that can be performed as a whole
+header - a file that contains functionality which is typically common to multiple cpp files and is #included at the top of another file
+IDE - integrated development environment
+#include - the statement that indicates you wish to include the functionality contained in another file
+library - a group of code that can be accessed using #include
+linker - the program that stitches your compiled source code files (object files) into an executable
+main() - the first function a c++ program looks for and executes
+object code - source code that has been compiled
+output - the result of a function
+program - a series of instructions for a computer
+source code - the instructions we write in a language such as c++
+statement - an instruction we give the computer.
