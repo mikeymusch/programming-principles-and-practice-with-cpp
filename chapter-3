@@ -1,0 +1,107 @@
+Source code for first exercise:
+#include "std_lib_facilities.h"
+
+void MakeLetter() {
+    string letter;
+
+    cout << "Enter the recipient's name.\n";
+    string recipient_name = " ";
+    cin >> recipient_name;
+
+    letter += "Dear " + recipient_name +
+              ",\n   How are you? I am fine. I miss you.\n   I am studying C++, it's great!\n";
+
+    cout << "Enter the name of a friend.\n";
+    string friend_name = " ";
+    cin >> friend_name;
+    cout << "Enter the gender of that friend.\n";
+    string friend_gender;
+    cin >> friend_gender;
+
+    if (friend_gender != "male" && friend_gender != "female")
+        simple_error("That's not a gender, you have been cancelled");
+    else if (friend_gender == "male")
+        letter += "   If you see " + friend_name + " please ask him to call me.\n";
+    else
+        letter += "   If you see " + friend_name + " please ask her to call me.\n";
+
+    cout << "Enter recipient's age.\n";
+    int age;
+    cin >> age;
+
+    letter += "   I hear you just had your birthday and are " + to_string(age) + " years old.\n";
+
+    if (age <= 0 || age >= 110)
+        simple_error("You're kidding!");
+    else if (age < 12)
+        letter += "   Next year you will be " + to_string(age + 1) + ".\n";
+    else if (age == 17)
+        letter += "   Next year you will be able to vote.\n";
+    else if (age >= 70)
+        letter += "   I hope you are enjoying retirement.\n";
+
+    letter += "   Yours sincerely,\n\nMikey Musch";
+
+    cout << letter;
+}
+
+int main()
+{
+    MakeLetter();
+}
+
+
+
+Review:
+1. what is meant by the term prompt
+  A prompt is a function that pauses for user input and continues after receiving input
+2. You read into a variable using the input opperator >>
+3. two lines of code to read user input into an int variable called number:
+  int number = 0;
+  cin >> number;
+4. "\n" is an escape character \ and n which together mean new line
+5. a space terminates input into a string
+6. any character that's not an integer terminates input into an int.
+7. cout << "Hello, " << first_name << "!\n"
+8. An object is an area of memory that can store a value
+9. a literal is a raw value such as: "mikey", 'c' 123.4
+10. There are string, int, char, pointer, float literals
+11. a variable is a name object
+12. a char is typically 1 byte, an int 2 or 4 bytes, and double 8 bytes
+13. bytes
+14. = is assignment, and == is the "equal to" comparison operator
+15. a definiton is the stating of an object's name, values, and methods
+16. initialization is the declaration of an object, it differs from assignment because you can initialize an object without assigning it a value
+17. string concatenation is the joining of strings, it looks like "some string " + ", some other string"
+18. not legal names:
+  correct?
+  the_$12_method
+  latest thing
+  this_1_is fine
+  2_for_1_special
+19. 5 examples of names you could use but shouldn't
+  xy7a, lnt, String, Int
+20. good rules for choosing names, make it clear and meaningful, short, not easily confusable character-wise, for example O0 I l
+21. type safety is the certainty that the type you're dealing with is what you expect it to be, it's important because without type safety you can attempt to
+    run methods on incompatible types
+22. since doubles can be larger in binary than ints, a conversion from double to int causes narrowing, which loses the extra 4 bytes a double can potentially have
+23. list notation can be used to help decide if a conversion from one type to another is safe or unsafe, 
+    if the type types are of differing sizes then narrowing will occur
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
